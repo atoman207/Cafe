@@ -29,7 +29,7 @@ const createDefaultAdmin = async () => {
     if (!existingAdmin) {
       console.log('📝 Creating default admin account...');
       
-      // Create admin account
+      // Create admin accoun
       const hashedPassword = await bcrypt.hash('12345678', 10);
       await User.create({
         username: 'Admin',
