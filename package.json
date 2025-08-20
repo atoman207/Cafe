@@ -1,0 +1,64 @@
+{
+  "name": "runmap",
+  "version": "1.0.0",
+  "description": "Marathon Event Search Platform with Payment System",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm start",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm install --production",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "test": "cd backend && node test-auth.js",
+    "test:payment": "cd backend && node test-payment.js"
+  },
+  "keywords": [
+    "marathon",
+    "events",
+    "payment",
+    "stripe",
+    "nodejs",
+    "react",
+    "nextjs"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/react": "^3.22.0",
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@sendgrid/mail": "^8.1.5",
+    "axios": "^1.10.0",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "framer-motion": "^12.23.6",
+    "googleapis": "^153.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mysql2": "^3.14.2",
+    "nodemailer": "^7.0.5",
+    "nodemon": "^3.1.10",
+    "resend": "^4.7.0",
+    "sequelize": "^6.37.7",
+    "sqlstring": "^2.3.3",
+    "stripe": "^18.3.0"
+  }
+}
